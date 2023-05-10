@@ -1,10 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage ('Build Docker Image') {
+        stage ("Build Docker Image") {
             steps {
                 script {
-                    dockerapp = docker.build('cacods/kube-news:${env.BUILD_ID}', '-f ./src/Dockerfile ./src')
+                    dockerapp = docker.build("cacods/kube-news:${env.BUILD_ID}", "-f ./src/Dockerfile ./src")
                 }
             }
         }
