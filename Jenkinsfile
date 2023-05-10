@@ -4,7 +4,7 @@ pipeline {
         stage ("Build Docker Image") {
             steps {
                 script {
-                    dockerapp = docker.build("cacods/kube-news:${env.BUILD_ID}", "-f ./src/Dockerfile ./src")
+                    dockerapp = docker.build("caco21/kube_news:${env.BUILD_ID}", "-f ./src/Dockerfile ./src")
                 }
             }
         }
